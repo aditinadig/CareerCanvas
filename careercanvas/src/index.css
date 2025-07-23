@@ -33,26 +33,26 @@
   color-scheme: light; /* color of browser-provided UI */
 
   /* colors */
-  --color-base-100: #f9fafb;
+  --color-base-100: var(--color-soft-gray, #f9fafb);
   --color-base-200: #1e293b07;
   --color-base-300: #1e293b10;
-  --color-base-content: #1e293b;
-  --color-primary: #5b507a;
-  --color-primary-content: #f9fafb;
-  --color-secondary: #9eadc8;
+  --color-base-content: var(--color-slate, #1e293b);
+  --color-primary: var(--color-ultra-violet, #5b507a);
+  --color-primary-content: var(--color-soft-gray, #f9fafb);
+  --color-secondary: var(--color-powder-blue, #9eadc8);
   --color-secondary-content: #f9fafb;
-  --color-accent: #b9e28c;
-  --color-accent-content: #1e293b;
-  --color-neutral: #5b618a;
-  --color-neutral-content: #f9fafb;
+  --color-accent: var(--color-light-green, #b9e28c);
+  --color-accent-content: var(--color-slate, #1e293b);
+  --color-neutral: var(--color-powder-violet, #5b618a);
+  --color-neutral-content: var(--color-soft-gray, #f9fafb);
   --color-info: oklch(70% 0.2 220);
-  --color-info-content: #f9fafb;
+  --color-info-content: var(--color-soft-gray, #f9fafb);
   --color-success: oklch(50% 0.25 140);
-  --color-success-content: #f9fafb;
+  --color-success-content: var(--color-slate, #1e293b);
   --color-warning: oklch(90% 0.25 80);
-  --color-warning-content: oklch(20% 0.05 80);
+  --color-warning-content: var(--color-slate, #1e293b);
   --color-error: oklch(40% 0.3 30);
-  --color-error-content: #f9fafb;
+  --color-error-content: var(--color-soft-gray, #f9fafb);
 
   /* border radius */
   --radius-selector: 1rem;
@@ -69,4 +69,10 @@
   /* effects */
   --depth: 1;
   --noise: 0;
+}
+
+:root {
+  font-family: var(--font-sans);
+  color: var(--color-slate, #1e293b);
+  background-color: var(--color-soft-gray, #f9fafb);
 }
