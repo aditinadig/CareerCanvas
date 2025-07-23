@@ -1,71 +1,72 @@
+/* Import Tailwind CSS base styles */
 @import "tailwindcss";
+
+/* Enable DaisyUI plugin for additional UI components */
 @plugin "daisyui";
 
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* Import fonts from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+/* Global styles */
+@theme {
+  /* Define color palette */
+  --color-ultra-violet: #5b507a;
+  --color-powder-violet: #5b618a;
+  --color-powder-blue: #9eadc8;
+  --color-light-green: #b9e28c;
+  --color-pear: #d6d84f;
+  --color-soft-gray: #f9fafb;
+  --color-slate: #1e293b;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  /* Define font families */
+  --font-sans: "Parkinsans", sans-serif;
+  --font-serif: "Tinos", serif;
+  --font-mono: "Inconsolata", monospace;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+@plugin "daisyui/theme" {
+  name: "CareerCanvas";
+  default: true; /* set as default */
+  prefersdark: false; /* set as default dark mode (prefers-color-scheme:dark) */
+  color-scheme: light; /* color of browser-provided UI */
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+  /* colors */
+  --color-base-100: #f9fafb;
+  --color-base-200: #1e293b07;
+  --color-base-300: #1e293b10;
+  --color-base-content: #1e293b;
+  --color-primary: #5b507a;
+  --color-primary-content: #f9fafb;
+  --color-secondary: #9eadc8;
+  --color-secondary-content: #f9fafb;
+  --color-accent: #b9e28c;
+  --color-accent-content: #1e293b;
+  --color-neutral: #5b618a;
+  --color-neutral-content: #f9fafb;
+  --color-info: oklch(70% 0.2 220);
+  --color-info-content: #f9fafb;
+  --color-success: oklch(50% 0.25 140);
+  --color-success-content: #f9fafb;
+  --color-warning: oklch(90% 0.25 80);
+  --color-warning-content: oklch(20% 0.05 80);
+  --color-error: oklch(40% 0.3 30);
+  --color-error-content: #f9fafb;
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+  /* border radius */
+  --radius-selector: 1rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.5rem;
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+  /* base sizes */
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  /* border size */
+  --border: 0px;
+
+  /* effects */
+  --depth: 1;
+  --noise: 0;
 }
